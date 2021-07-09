@@ -27,6 +27,7 @@ function createList(name){
 }
 
 function create(){
+    clearList(listContainer)
     list.forEach(list => {
         const listElement = document.createElement("li")
         listElement.classList.add("projects")
@@ -34,6 +35,12 @@ function create(){
         listElement.innerText = list.name
         listContainer.appendChild(listElement)
     })
+}
+
+function clearList(element){
+    while(element.firstChild){
+        element.removeChild(element.firstChild)
+    }
 }
 
 create()
