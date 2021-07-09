@@ -18,6 +18,10 @@
     text-decoration: none;
 }
 
+.delete {
+  display: inline-block;
+  float: right;
+}
 
 .sidebar li.activelist {
     background-color: #04AA6D;

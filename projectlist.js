@@ -1,6 +1,7 @@
 const listContainer = document.querySelector("[data-project]")
 const newProject = document.querySelector("[data-new-project]")
 const newListInput = document.querySelector("[data-new-list-input]")
+const deleteList = document.querySelector("[data-delete-list]")
 
 const LOCAL_STORAGE_LIST_KEY = "task.list"
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "task.selectedListId"
@@ -16,6 +17,12 @@ listContainer.addEventListener("click", e => {
     }
 })
 
+deleteList.addEventListener("click", e =>{
+    list = list.filter(list => list.id !== selectedListId)
+    selectedListId = null
+    saveList()
+    create()
+})
 
 newProject.addEventListener("submit", e => {
     e.preventDefault()
