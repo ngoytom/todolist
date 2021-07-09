@@ -1,0 +1,31 @@
+.header{
+    width: 100%;
+    background-color:gray;
+    height: 20%;
+}
+
+.sidebar {
+    width: 400px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+  }
+
+.sidebar li {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+.sidebar li.activelist {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+.sidebar li:hover:not(.activelist) {
+    background-color: #555;
+    color: white;
+  }
+  
